@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Waste Classification data | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="This dataset contains 22500 images of organic and recyclable objects" />
+    <meta name="keywords" content="business,image,energy,classification,binary classification" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==" type="text/javascript">
+    window["pageRequestStartTime"] = 1737728478112;
+    window["pageRequestEndTime"] = 1737728478218;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==" id="gsi-client" src="https://accounts.google.com/gsi/client" async defer></script>
+  <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==">window.KAGGLE_JUPYTERLAB_PATH = "/static/assets/jupyterlab-v4/jupyterlab-index-8de602e664b236ca073f.html";</script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+    <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" id="dynamic-favicon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL@0..1&display=block"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Symbols:FILL@0..1&display=block"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+
+    <link rel="canonical" href="https://www.kaggle.com/datasets/techsash/waste-classification-data" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=dne" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=2d4e7ec4eb689d926191" />
+
+  
+    
+ 
+      <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7QHS60L4Q', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==" async src="https://www.googletagmanager.com/gtag/js?id=G-T7QHS60L4Q"></script>
+
+  
+    
+    <meta property="og:url" content="https://www.kaggle.com/datasets/techsash/waste-classification-data" />
+    <meta property="og:title" content="Waste Classification data" />
+    <meta property="og:description" content="This dataset contains 22500 images of organic and recyclable objects" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/233210/497253/2a00162a2cd1573001f687c5d71d7a6c/dataset-card.jpg?t=2019-06-16-03-48-25" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+        <meta name="twitter:creator" content="@techSash" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+            <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Waste Classification data","description":"<h1>WASTE CLASSIFICATION</h1>\n\n**PROBLEM**<br><br>\nWaste management is a big problem in our country. Most of the wastes end up in landfills. This leads to many issues like\n\n- Increase in landfills<br>\n- Eutrophication<br>\n- Consumption of toxic waste by animals<br>\n- Leachate<br>\n- Increase in toxins<br>\n- Land, water and air pollution<br><br>\n\n**APPROACH**<br><br>\n- Studied white papers on waste management<br>\n- Analysed the components of household waste<br>\n- Segregated into two classes (Organic and recyclable)<br>\n- Automated the process by using IOT and machine learning<br>\n- Reduce toxic waste ending in landfills<br><br>\n\n**IMPLEMENTATION**<br><br>\nDataset is divided into train data (85%) and test data (15%)\u2028\u2028\n\nTraining data - 22564 images\u2028    Test data - 2513 images","url":"https://www.kaggle.com/techsash/waste-classification-data","version":1,"keywords":["subject, people and society, business","data type, image","subject, science and technology, energy","task, classification","task, binary-classification"],"license":{"@type":"CreativeWork","name":"CC BY-SA 4.0","url":"https://creativecommons.org/licenses/by-sa/4.0/"},"identifier":["233210"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"Sashaank Sekar","url":"https://www.kaggle.com/techsash","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/1274645-kg.jpg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/techsash/waste-classification-data/download?datasetVersionNumber=1","contentSize":"447914276 bytes"}],"commentCount":1,"dateModified":"2019-06-16T03:24:52.733Z","discussionUrl":"https://www.kaggle.com/techsash/waste-classification-data/discussion","alternateName":"This dataset contains 22500 images of organic and recyclable objects","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/233210/497253/2a00162a2cd1573001f687c5d71d7a6c/dataset-card.jpg?t=2019-06-16-03-48-25","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":1},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":34045},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":289502},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":450}]}</script>
+        
+
+  
+    
+
+  
+    
+
+
+    <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==" src="/static/assets/runtime.js?v=c0cf40c894773afc5a0d"></script>
+  <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==" src="/static/assets/vendor.js?v=a62013a985d655b5d6e4"></script>
+  <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==" src="/static/assets/app.js?v=00b89e54d7ead91dd160"></script>
+    <script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+<body>
+<main>
+    
+
+
+
+
+
+<div id="site-container"></div>
+
+<div id="site-body" class="hide">
+    
+
+
+<script nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="aw/b8Rs/xxt5Y8Ifa8zOGA==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    // Always use the production asset in local dev, which is served from GCS. We tried to proxy and / or serve this
+    // in a better way in localhost, but it didn't work out. See b/328073416#comment8 for details.
+    const forceProdHost = window.location.hostname === "localhost";
+    lib.src = `${forceProdHost ? "https://www.kaggle.com" : ""}/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
