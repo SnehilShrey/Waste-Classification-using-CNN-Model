@@ -1,8 +1,9 @@
-streamlit==1.42.0
-tensorflow-cpu==2.18.0
+streamlit==1.43.1
+tensorflow-cpu==2.19.0rc0
 numpy
 pandas
 matplotlib
 tensorflow-lite
 pillow
 cv2
+opencv-python
