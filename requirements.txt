@@ -1,5 +1,6 @@
 streamlit
-tensorflow
+tensorflow==2.9.1
 numpy
 pillow
-tflite-runtime
+tflite-runtime==2.9.1
+opencv-python
