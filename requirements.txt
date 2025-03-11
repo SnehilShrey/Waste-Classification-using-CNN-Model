@@ -3,6 +3,5 @@ tensorflow-cpu==2.18.0
 numpy
 pandas
 matplotlib
-tensorflow-lite
 pillow
 opencv-python
