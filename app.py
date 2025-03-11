@@ -50,8 +50,8 @@ def predict_waste(image):
     interpreter.invoke()
     predictions = interpreter.get_tensor(output_details[0]['index'])[0]
     
-    class_index = np.argmax(predictions)
-    confidence = predictions[class_index] * 100
+    class_index = int(np.argmax(predictions))  # Ensure integer index
+    confidence = float(predictions[class_index] * 100)  # Ensure float for confidence
     return class_labels[class_index], confidence
 
 # Streamlit UI with refined spacing
@@ -78,7 +78,7 @@ st.markdown("""
 # File uploader (now directly below second subtitle)
 uploaded_file = st.file_uploader("", type=["jpg", "png", "jpeg"])
 
-if uploaded_file:
+if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption="Uploaded Image", use_container_width=True)
     
