@@ -27,18 +27,29 @@ def set_background(image_file):
 # Call function to set background (Use your saved image file name)
 set_background("background.jpg")  
 
-# Load model
-model = tf.keras.models.load_model("waste_classification_model.keras")
+# Load TFLite model
+def load_tflite_model():
+    interpreter = tf.lite.Interpreter(model_path="waste_classification_model.tflite")
+    interpreter.allocate_tensors()
+    return interpreter
+
+interpreter = load_tflite_model()
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
 
 # Define class labels
 class_labels = ["Organic", "Recyclable"]
 
-# Function to make predictions
+# Function to make predictions using TFLite model
 def predict_waste(image):
     image = image.resize((224, 224))
-    image = np.array(image) / 255.0
+    image = np.array(image, dtype=np.float32) / 255.0
     image = np.expand_dims(image, axis=0)
-    predictions = model.predict(image)[0]
+    
+    interpreter.set_tensor(input_details[0]['index'], image)
+    interpreter.invoke()
+    predictions = interpreter.get_tensor(output_details[0]['index'])[0]
+    
     class_index = np.argmax(predictions)
     confidence = predictions[class_index] * 100
     return class_labels[class_index], confidence
@@ -90,7 +101,6 @@ if uploaded_file:
         </div>
     """, unsafe_allow_html=True)
         
-    
     # Color-coded result
     if label == "Organic":
         st.success("🌿 This waste is **Organic** and can be composted! ♻️")
