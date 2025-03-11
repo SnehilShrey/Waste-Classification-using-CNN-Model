@@ -1,7 +1,8 @@
-streamlit
-tensorflow-cpu==2.16.0 
+streamlit==1.42.0
+tensorflow-cpu==2.18.0
 numpy
 pandas
+matplotlib
+tensorflow-lite
 pillow
-opencv-python
-tflite-runtime
+cv2
